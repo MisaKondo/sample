@@ -3,8 +3,6 @@
 #
 node /localhost/ {
   notify { 'template_node series start:': } ->
-  #
-  # local accounts management
-  #
+  class { '::apache': }
   notify { 'template_node series end:': }
 }
